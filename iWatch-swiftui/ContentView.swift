@@ -16,6 +16,7 @@ struct ContentView: View {
 struct HomeView: View {
     
     @State var selectedItem = "ALL"
+    @State var selectedTab = 0
     var menu = [
         "ALL",
         "CLASSIC",
@@ -111,7 +112,8 @@ struct HomeView: View {
                                 Color("Color")
                                     .frame(height: screenHeight / 3)
                                     .cornerRadius(20)
-                                
+                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 10)
+                                    
                                 VStack(spacing: 20) {
                                     Image(watch.image)
                                         .resizable()
@@ -151,9 +153,43 @@ struct HomeView: View {
                 //Watch Items Ends
                 
                 
-                Spacer()
+                HStack {
+                    Button{
+                        selectedTab = 0
+                    } label: {
+                        Image(systemName: "suit.heart.fill")
+                            .font(.title)
+                            .foregroundColor(selectedTab == 0 ? .black : .black.opacity(0.25))
+                    }
+                    
+                    Spacer(minLength: 0)
+                    
+                    Button{
+                        selectedTab = 1
+                    } label: {
+                        Image(systemName: "safari")
+                            .font(.title)
+                            .foregroundColor(selectedTab == 1 ? .black : .black.opacity(0.25))
+                    }
+                    
+                    Spacer(minLength: 0)
+                    
+                    Button{
+                        selectedTab = 2
+                    } label: {
+                        Image(systemName: "person.circle")
+                            .font(.title)
+                            .foregroundColor(selectedTab == 2 ? .black : .black.opacity(0.25))
+                    }
+                }
+                .padding(.horizontal, 30)
+                .padding(.top)
+                .padding(.bottom)
+                .background(Color.white)
+                .clipShape(CShape())
             }
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
@@ -169,4 +205,13 @@ struct Watch: Identifiable, Hashable {
     var price: String
     var image: String
     var title: String
+}
+
+
+struct CShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 45, height: 45))
+        
+        return Path(path.cgPath)
+    }
 }
