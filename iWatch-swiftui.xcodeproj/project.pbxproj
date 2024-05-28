@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E267A3FE2C05DDF10028CBAB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267A3FD2C05DDF10028CBAB /* HomeView.swift */; };
+		E267A4012C05DE660028CBAB /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267A4002C05DE660028CBAB /* NavigationBarView.swift */; };
+		E267A4032C05DEA60028CBAB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267A4022C05DEA60028CBAB /* HeaderView.swift */; };
+		E267A4052C05DEC70028CBAB /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267A4042C05DEC70028CBAB /* MenuBarView.swift */; };
+		E267A4072C05DF2E0028CBAB /* WatchItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267A4062C05DF2E0028CBAB /* WatchItemView.swift */; };
+		E267A4092C05DFB90028CBAB /* BottomBarNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267A4082C05DFB90028CBAB /* BottomBarNavigationView.swift */; };
 		E2FDC30C2C05B09900C8785A /* iWatch_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDC30B2C05B09900C8785A /* iWatch_swiftuiApp.swift */; };
 		E2FDC30E2C05B09900C8785A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDC30D2C05B09900C8785A /* ContentView.swift */; };
 		E2FDC3102C05B09B00C8785A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FDC30F2C05B09B00C8785A /* Assets.xcassets */; };
@@ -14,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E267A3FD2C05DDF10028CBAB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E267A4002C05DE660028CBAB /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		E267A4022C05DEA60028CBAB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E267A4042C05DEC70028CBAB /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		E267A4062C05DF2E0028CBAB /* WatchItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchItemView.swift; sourceTree = "<group>"; };
+		E267A4082C05DFB90028CBAB /* BottomBarNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarNavigationView.swift; sourceTree = "<group>"; };
 		E2FDC3082C05B09900C8785A /* iWatch-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iWatch-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FDC30B2C05B09900C8785A /* iWatch_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iWatch_swiftuiApp.swift; sourceTree = "<group>"; };
 		E2FDC30D2C05B09900C8785A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +44,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E267A3FC2C05DDD30028CBAB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E267A3FF2C05DE540028CBAB /* Views */,
+				E267A3FD2C05DDF10028CBAB /* HomeView.swift */,
+				E267A4082C05DFB90028CBAB /* BottomBarNavigationView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E267A3FF2C05DE540028CBAB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E267A4002C05DE660028CBAB /* NavigationBarView.swift */,
+				E267A4022C05DEA60028CBAB /* HeaderView.swift */,
+				E267A4042C05DEC70028CBAB /* MenuBarView.swift */,
+				E267A4062C05DF2E0028CBAB /* WatchItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E2FDC2FF2C05B09900C8785A = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +84,7 @@
 		E2FDC30A2C05B09900C8785A /* iWatch-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				E267A3FC2C05DDD30028CBAB /* Home */,
 				E2FDC30B2C05B09900C8785A /* iWatch_swiftuiApp.swift */,
 				E2FDC30D2C05B09900C8785A /* ContentView.swift */,
 				E2FDC30F2C05B09B00C8785A /* Assets.xcassets */,
@@ -137,7 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E267A4032C05DEA60028CBAB /* HeaderView.swift in Sources */,
+				E267A3FE2C05DDF10028CBAB /* HomeView.swift in Sources */,
+				E267A4072C05DF2E0028CBAB /* WatchItemView.swift in Sources */,
 				E2FDC30E2C05B09900C8785A /* ContentView.swift in Sources */,
+				E267A4052C05DEC70028CBAB /* MenuBarView.swift in Sources */,
+				E267A4092C05DFB90028CBAB /* BottomBarNavigationView.swift in Sources */,
+				E267A4012C05DE660028CBAB /* NavigationBarView.swift in Sources */,
 				E2FDC30C2C05B09900C8785A /* iWatch_swiftuiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
