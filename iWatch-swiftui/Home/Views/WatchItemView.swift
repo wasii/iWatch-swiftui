@@ -9,13 +9,7 @@ import SwiftUI
 
 struct WatchItemView: View {
     
-    var watchData = [
-        Watch(id: 0, color: "Dark Black", price: "$399.99", image: "black", title: "Classic Black"),
-        Watch(id: 1, color: "Rose Gold", price: "$499.99", image: "gold", title: "Grand Gold"),
-        Watch(id: 2, color: "Red", price: "$599.99", image: "red", title: "Formal Red"),
-        Watch(id: 3, color: "Light Yellow", price: "$699.99", image: "yellow", title: "Original Yellow"),
-        Watch(id: 4, color: "White", price: "$799.99", image: "white", title: "Treand White")
-    ]
+    
     
     var screenWidth = UIScreen.main.bounds.width
     var screenHeight = UIScreen.main.bounds.height
@@ -23,7 +17,7 @@ struct WatchItemView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 25) {
-                ForEach(watchData) { watch in
+                ForEach(Watch.watchDetails()) { watch in
                     ZStack(alignment: .bottom) {
                         
                         Color("Color")
@@ -35,6 +29,8 @@ struct WatchItemView: View {
                             Image(watch.image)
                                 .resizable()
                                 .frame(width: screenWidth / 1.7, height: 375)
+                                .rotationEffect(.degrees(30))
+                                .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 10)
                             
                             HStack {
                                 VStack(alignment: .leading, spacing: 10) {
@@ -81,4 +77,15 @@ struct Watch: Identifiable, Hashable {
     var price: String
     var image: String
     var title: String
+    
+    
+    static func watchDetails() -> [Watch] {
+        return  [
+            Watch(id: 0, color: "Dark Black", price: "$399.99", image: "black", title: "Classic Black"),
+            Watch(id: 1, color: "Rose Gold", price: "$499.99", image: "gold", title: "Grand Gold"),
+            Watch(id: 2, color: "Red", price: "$599.99", image: "red", title: "Formal Red"),
+            Watch(id: 3, color: "Light Yellow", price: "$699.99", image: "yellow", title: "Original Yellow"),
+            Watch(id: 4, color: "White", price: "$799.99", image: "white", title: "Treand White")
+        ]
+    }
 }
